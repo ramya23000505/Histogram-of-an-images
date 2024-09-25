@@ -26,8 +26,8 @@ The Histogram of gray scale image and color image is shown.
 
 
 ## Program:
-### Developed By: Ramya R
-### Register Number: 212223230169
+#### Developed By: Ramya R
+#### Register Number: 212223230169
 
 ### Input Grayscale Image and Color Image
 ## Gray Image
