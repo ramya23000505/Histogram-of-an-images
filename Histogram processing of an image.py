@@ -18,15 +18,18 @@ cv2.destroyAllWindows()
 
 
 import matplotlib.pyplot as plt 
-grayscale_image=cv2.imread("gray image of flower.jpg")
-colourscale_image=cv2.imread("color image of flower.jpg")
-hist=cv2.calcHist(grayscale_image,[0],None,[255],[0,255])
-hist1=cv2.calcHist()
+import numpy as np
+Gray_image = cv2.imread("Exp-3 image.jpg")
+Color_image = cv2.imread("Exp-3 image2.jpg")
+grey=cv2.cvtColor(gray_image,cv2.COLOR_BGR2GRAY)
+gray_hist = cv2.calcHist([grey],[0],None,[1100],[0,1100])
 plt.figure()
+plt.imshow(grey)
+plt.show()
 plt.title("Histogram")
-plt.xlabel("")
-plt.ylabel("pixel count")
-plt.stem()
+plt.xlabel("Grayscale Value")
+plt.ylabel("Pixel Count")
+plt.stem(gray_hist)
 plt.show()
 
 
@@ -41,10 +44,19 @@ gi=cv2.imread("gray image of flower.jpg",0)
 colorscale=cv2.imread("color image of flower.jpg")
 g=cv2.resize(gi,(500,400))
 equ=cv2.equalizeHist(gi)
+equ = cv2.equalizeHist(grey)
+plt.imshow(equ)
+plt.show()
 
+# For color image
+color_image=cv2.imread('Exp-3 image2.jpg')
+grey=cv2.cvtColor(color_image,cv2.COLOR_BGR2GRAY)
+plt.imshow(color_image)
+plt.show()
 
-
-
+eq = cv2.equalizeHist(grey)
+plt.imshow(eq)
+plt.show()
 
 
 
